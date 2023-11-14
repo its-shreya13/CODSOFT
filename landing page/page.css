@@ -1,0 +1,235 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+}
+
+header {
+   background:rgb(10, 9, 9);
+   width: 100%;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 50px;
+}
+.logo{
+   display: flex;
+}
+.logo h3{
+   margin: 0;
+   color:rgb(230, 248, 248) ;
+   margin-right: 15px;
+   font-size: 1.5rem;
+}
+img{
+   justify-content: left;
+   width: 32px;
+}
+.navbar {
+   display: flex;
+}
+
+.navbar a {
+   display: inline-block;
+   color: rgb(230, 248, 248);
+   padding: 5px 0;
+   margin: 0 10px;
+   border: 3px solid transparent;
+   transition: 0.2s;
+}
+
+.navbar a:hover {
+   color: rgb(164, 23, 23);
+}
+
+.drop-down {
+   cursor: pointer;
+   display: none;
+}
+
+.drop-down div {
+   width: 30px;
+   height: 3px;
+   margin: 5px 0;
+   background: rgb(247, 236, 236);
+}
+
+
+
+.intro {
+   position: relative;
+   
+}
+
+.image1,
+.image2 {
+   height: 60vh;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+}
+
+.image1 {
+   animation: fadeIn 3s ease-in-out forwards, slide 12s linear infinite;
+}
+
+.image2 {
+   animation: fadeIn 3s ease-in-out forwards, slide 12s linear infinite;
+   animation-delay: 6s; 
+}
+
+.intro img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.text {
+   width: 500px;
+   position: absolute;
+   top: 86%;
+   left: 20px;
+   color: rgb(255, 248, 240);
+   font-size: 15px;
+   font-weight: 400;
+   animation: textup 12s linear infinite;
+   transform: translateY(100px);
+}
+
+@keyframes fadeIn1 {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes fadeIn2 {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes slide {
+   0% {
+      opacity: 1;
+   }
+   25%, 50% {
+      opacity: 0;
+   }
+   75%, 100% {
+      opacity: 1;
+   }
+}
+@keyframes textup {
+   0%, 100% {
+      transform: translateY(0px);
+   }
+}
+.info{
+   margin-top: 443px;
+   width: 100%;
+   height: 300px;
+   background: rgb(10, 9, 9);
+   display: flex;
+}
+.race h1{
+   color: aliceblue;
+   padding: 20px;
+   margin-top: 80px;
+   font-size: 1rem;
+   font-weight: 300;
+}
+.btn{
+   margin-left: 20px;
+   border-radius: 9px;
+   padding: 5px;
+   color: rgb(27, 21, 21);
+   border-color: black;
+   
+}
+.btn:hover {
+   background-color: rgb(164, 23, 23); 
+   color: white; 
+}
+
+.image {
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;
+  
+}
+
+.image img {
+   width: 49.7%; 
+   height: 100%;
+   box-sizing: border-box;
+   border-radius: 10px;
+}
+footer {
+   background-color:rgb(10, 9, 9);
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+ }
+ 
+ .social-icons a {
+   color: #fff;
+   font-size: 1.5rem;
+   margin: 0 10px;
+   text-decoration: none;
+   transition: color 0.3s ease;
+ }
+ .social-icons a:hover {
+   color: rgb(164, 23, 23); 
+ }
+ 
+ @media (max-width: 768px) {
+   .social-icons {
+     margin-top: 20px;
+   }
+ }
+ @media only screen and (max-width: 900px) {
+   header {
+      padding: 30px;
+   }
+}
+
+@media only screen and (max-width: 700px) {
+   .drop-down {
+      display: block;
+      position: relative;
+      z-index: 2;
+   }
+
+   .navbar {
+      position: absolute;
+      left: -100%;
+      top: 70px;
+      width: 100%;
+      background-color: rgb(10, 9, 9);
+      padding: 30px;
+      transition: left 0.3s ease;
+      z-index: 1;
+   }
+
+   header #nav-check:checked ~ .navbar {
+      left: 0;
+   }
+
+   .navbar {
+      display: block;
+      margin: 5px 0;
+   }
+}
